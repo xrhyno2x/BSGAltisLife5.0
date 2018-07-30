@@ -103,8 +103,8 @@ class CfgSpawnPoints {
 
         class Rebels {
             class Rebel1 {
-                displayName = $STR_SP_EMS_Kav;
-                spawnMarker = "medic_spawn_1";
+                displayName = Rebel Spawn;
+                spawnMarker = "rebel_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
             };
