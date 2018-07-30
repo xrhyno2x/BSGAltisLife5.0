@@ -111,10 +111,12 @@ class Life_Settings {
     bank_cop = 7000; //Amount of cash in bank for new cops
     bank_civ = 3000; //Amount of cash in bank for new civillians
     bank_med = 6500; //Amount of cash in bank for new medics
+    bank_reb = 5000; //Amount of cash in bank for new Rebels
 
     paycheck_cop = 500; //Payment for cops
     paycheck_civ = 350; //Payment for civillians
     paycheck_med = 450; //Payment for medics
+    paycheck_reb = 450; //Payment for Rebels
 
     paycheck_period = 5; //Scaled in minutes
     bank_transferTax = .05; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier

@@ -29,6 +29,7 @@ class Life_Client_Core {
         class initCiv {};
         class initCop {};
         class initMedic {};
+        class initRebel {};
         class setupActions {};
         class setupEVH {};
         class survival {};
@@ -104,7 +105,7 @@ class Life_Client_Core {
         class robPerson {};
         class robReceive {};
         class tazed {};
-		class civLicenseShown {}; // ICI
+		    class civLicenseShown {}; // ICI
         class civShowLicense {}; // ICI
     };
 
@@ -144,8 +145,14 @@ class Life_Client_Core {
         class ticketPrompt {};
         class vehInvSearch {};
         class wantedGrab {};
-		class copLicenseShown {}; // ICI
+		    class copLicenseShown {}; // ICI
         class copShowLicense {}; // ICI
+    };
+
+    class Reb {
+        file = "core\rebel";
+        class rebelLoadout {};
+        class RebelMarkers {};
     };
 
     class Dialog_Controls {

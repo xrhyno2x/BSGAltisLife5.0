@@ -81,7 +81,7 @@ switch (playerSide) do {
         };
 
         {
-            _house = nearestObject [(call compile format ["%1",(_x select 0)]), "House"];
+           _house = nearestObject [(call compile format ["%1",(_x select 0)]), "House"];
             life_vehicles pushBack _house;
         } forEach life_houses;
 
@@ -100,6 +100,23 @@ switch (playerSide) do {
             life_thirst = ((_this select 9) select 1);
             player setDamage ((_this select 9) select 2);
         };
+    };
+
+    case east: {
+        CONST(life_rebelLevel,(_this select 7));
+        CONST(life_coplevel,0);
+        if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
+            life_hunger = ((_this select 9) select 0);
+            life_thirst = ((_this select 9) select 1);
+            player setDamage ((_this select 9) select 2);
+        };
+
+        {
+           _house = nearestObject [(call compile format ["%1",(_x select 0)]), "House"];
+            life_vehicles pushBack _house;
+        } forEach life_houses;
+
+        [] spawn life_fnc_initHouses;
     };
 };
 

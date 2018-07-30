@@ -71,6 +71,9 @@ switch (playerSide) do {
     case independent: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
     };
+    case east: {
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_reb");
+    };
 };
 
 switch (playerSide) do {
@@ -86,6 +89,11 @@ switch (playerSide) do {
     case independent: {
         //Initialize Medics and blah
         _handle = [] spawn life_fnc_initMedic;
+        waitUntil {scriptDone _handle};
+    };
+    case east: {
+        //Initialize Medics and blah
+        _handle = [] spawn life_fnc_initRebel;
         waitUntil {scriptDone _handle};
     };
 };
