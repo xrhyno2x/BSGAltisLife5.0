@@ -13,12 +13,10 @@ if (life_blacklisted) exitWith {
     sleep 30;
 };
 
-if(!(str(player) in ["reb_99"])) then {
  if((FETCH_CONST(life_reblevel) < 1) && (FETCH_CONST(life_adminlevel) == 0)) then {
  ["NotWhitelisted",false,true] call BIS_fnc_endMission;
  sleep 35;
  };
-};
 
 
 player setVariable ["rank",(FETCH_CONST(life_reblevel)),true];
