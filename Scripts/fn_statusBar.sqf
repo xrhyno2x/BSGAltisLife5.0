@@ -17,6 +17,6 @@ disableSerialization;
 	{
 		sleep 1;
 		_counter = _counter - 1;
-		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetText format[" FPS: %1 | Police: %2 | Civilians: %3 | EMS: %4 | CASH: %5 | BANK: %6 | GRIDREF: %7 ", round diag_fps, west countSide playableUnits, civilian countSide playableUnits, independent countSide playableUnits,[life_cash] call life_fnc_numberText,[life_atmbank] call life_fnc_numberText,mapGridPosition player, _counter];
+		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetText format[" FPS: %1 | Police: %2 | Rebels: %3 | Civilians: %4 | EMS: %5 | CASH: %6 | BANK: %7 | GRIDREF: %8 ", round diag_fps, west countSide playableUnits, east countSide playableUnits, civilian countSide playableUnits, independent countSide playableUnits,[life_cash] call life_fnc_numberText,[life_atmbank] call life_fnc_numberText,mapGridPosition player, _counter];
 	};
 };
