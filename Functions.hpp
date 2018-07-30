@@ -152,7 +152,7 @@ class Life_Client_Core {
     class Reb {
         file = "core\rebel";
         class rebelLoadout {};
-        class RebelMarkers {};
+        class rebelMarkers {};
     };
 
     class Dialog_Controls {

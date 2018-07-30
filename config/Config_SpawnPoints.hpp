@@ -101,7 +101,7 @@ class CfgSpawnPoints {
             };
         };
 
-        class Rebels {
+        class Rebel {
             class Rebel1 {
                 displayName = Rebel Spawn;
                 spawnMarker = "rebel_spawn_1";
