@@ -173,7 +173,8 @@ class CfgRemoteExec {
 
     class Commands {
         mode = 1;
-        jip = 0;
+        jip = 1;
+		    #include "maverick\maverick_remoteExec_master.cpp"
 
         F(addHandgunItem,ANYONE)
         F(addMagazine,ANYONE)

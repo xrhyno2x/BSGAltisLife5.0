@@ -23,13 +23,17 @@ class RscTitles {
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
 	#include "dialog\statusBar.hpp"
+	#include "maverick\introcam\dialogs\title_status.hpp"
+	#include "maverick\tuning\dialogs\titles.hpp"
 };
 
 class CfgFunctions {
     #include "Functions.hpp"
+	#include "maverick\maverick_functions_master.cpp"
 };
 
 class CfgSounds {
+	#include "maverick\navigation\sounds\voicepacks\male_en-en_1\sounds.cpp"
     sounds[] = {};
     class sirenLong {
         name = "sirenLong";
@@ -174,3 +178,5 @@ class CfgNotifications {
         priority = 5;
     };
 };
+
+#include "maverick\maverick_master.cpp"

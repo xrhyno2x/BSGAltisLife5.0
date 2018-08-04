@@ -8,7 +8,7 @@
     Setup data gets sent to life_server\Functions\MySQL\fn_insertRequest.sqf
 */
 if (life_session_completed) exitWith {}; //Why did this get executed when the client already initialized? Fucking arma...
-cutText[localize "STR_Session_QueryFail","BLACK FADED"];
+[0, localize "STR_Session_QueryFail"] call mav_introcam_fnc_updateCinematicStatus;
 0 cutFadeOut 9999999;
 private ["_bank"];
 

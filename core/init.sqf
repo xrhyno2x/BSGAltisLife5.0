@@ -10,7 +10,8 @@
 private ["_handle","_timeStamp","_extDB_notLoaded"];
 life_firstSpawn = true;
 life_session_completed = false;
-0 cutText[localize "STR_Init_ClientSetup","BLACK FADED"];
+[] call mav_introcam_fnc_startCinematicCam;
+[0, "Setting up client, please wait"] call mav_introcam_fnc_updateCinematicStatus;
 0 cutFadeOut 9999999;
 _timeStamp = diag_tickTime;
 _extDB_notLoaded = "";
@@ -39,7 +40,7 @@ diag_log "::Life Client:: Waiting for server functions to transfer..";
 waitUntil {(!isNil "TON_fnc_clientGangLeader")};
 
 diag_log "::Life Client:: Received server functions.";
-0 cutText [localize "STR_Init_ServerReady","BLACK FADED"];
+[0, "Waiting for server to be ready"] call mav_introcam_fnc_updateCinematicStatus;
 0 cutFadeOut 99999999;
 
 diag_log "::Life Client:: Waiting for the server to be ready..";
@@ -54,7 +55,8 @@ if (life_server_extDB_notLoaded) exitWith {
 waitUntil {life_server_isReady};
 [] call SOCK_fnc_dataQuery;
 waitUntil {life_session_completed};
-0 cutText[localize "STR_Init_ClientFinish","BLACK FADED"];
+[1, "PRESS SPACE TO CONTINUE"] call mav_introcam_fnc_updateCinematicStatus;
+waitUntil {mav_introcam_continue};
 0 cutFadeOut 9999999;
 
 //diag_log "::Life Client:: Group Base Execution";
